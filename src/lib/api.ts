@@ -1,6 +1,18 @@
 import { ENDPOINTS } from "./endpoints/index";
 
-export const API_BASE_URL = "/api/v1";
+const DEFAULT_API_BASE_URL = "/api/v1";
+
+function normalizeApiBaseUrl(value?: string) {
+  const trimmedValue = value?.trim();
+
+  if (!trimmedValue) {
+    return DEFAULT_API_BASE_URL;
+  }
+
+  return trimmedValue.replace(/\/+$/, "");
+}
+
+export const API_BASE_URL = normalizeApiBaseUrl(import.meta.env.VITE_API_BASE_URL);
 
 export class ApiError extends Error {
   status: number;
@@ -41,6 +53,7 @@ export type ApiResultWithMeta<T> = {
   message: string;
   pagination?: PaginationMeta;
 };
+
 
 type RequestConfig = RequestInit & {
   skipJson?: boolean;

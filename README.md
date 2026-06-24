@@ -41,7 +41,18 @@ export default defineConfig([
     },
   },
 ])
+
+## Variável de ambiente do backend
+
+Use `VITE_API_BASE_URL` para apontar o frontend para o backend.
+
+Exemplo:
+
+```bash
+VITE_API_BASE_URL=http://localhost:8080/api/v1
 ```
+
+Se a variável não existir, o app continua usando `/api/v1` como padrão.
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
