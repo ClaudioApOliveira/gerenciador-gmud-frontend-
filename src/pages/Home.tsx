@@ -36,19 +36,19 @@ export default function Home() {
             },
             {
                 label: "Pendentes",
-                value: gmuds.filter((item) => item.statusChange === "Pendente").length,
+                value: gmuds.filter((item) => item.status === "Pendente").length,
                 icon: Clock,
                 color: "yellow"
             },
             {
                 label: "Concluídas",
-                value: gmuds.filter((item) => item.statusChange === "Concluida").length,
+                value: gmuds.filter((item) => item.status === "Concluida").length,
                 icon: CheckCircle2,
                 color: "green"
             },
             {
                 label: "Canceladas",
-                value: gmuds.filter((item) => item.statusChange === "Cancelada").length,
+                value: gmuds.filter((item) => item.status === "Cancelada").length,
                 icon: XCircle,
                 color: "red"
             }
