@@ -1,0 +1,377 @@
+.page {
+  color: #e8f2ff;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #f5f9ff;
+  text-shadow: 0 8px 20px rgb(4 10 24 / 30%);
+}
+
+.addButton,
+.clearButton,
+.cancelButton,
+.saveButton,
+.removeButton,
+.paginationButton {
+  border: 1px solid rgb(176 218 255 / 24%);
+  background: rgb(22 35 58 / 40%);
+  color: #e8f2ff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgb(240 250 255 / 20%);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+}
+
+.addButton,
+.editButton,
+.removeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.filtersBar {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, minmax(150px, 1fr)) auto;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid rgb(169 213 255 / 26%);
+  border-radius: 14px;
+  background: rgb(21 32 54 / 42%);
+  box-shadow: 0 16px 30px rgb(6 12 26 / 26%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+}
+
+.filterField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: #bdd0ea;
+}
+
+.filterField input,
+.filterField select,
+.form input,
+.form select {
+  border: 1px solid rgb(170 213 255 / 22%);
+  border-radius: 8px;
+  background: rgb(12 20 37 / 45%);
+  color: #e8f2ff;
+  padding: 9px;
+  outline: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.filterField input:focus,
+.filterField select:focus,
+.form input:focus,
+.form select:focus {
+  border-color: rgb(184 228 255 / 40%);
+  box-shadow: 0 0 0 3px rgb(133 214 255 / 20%);
+}
+
+.resultCount,
+.paginationInfo {
+  margin: 0 0 10px;
+  color: #bfd1ea;
+  font-size: 13px;
+}
+
+.tableContainer {
+  border: 1px solid rgb(169 213 255 / 24%);
+  border-radius: 14px;
+  overflow: auto;
+  background: rgb(20 31 52 / 44%);
+  box-shadow: 0 18px 34px rgb(6 12 26 / 28%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+}
+
+.table thead tr {
+  background: rgb(36 58 89 / 52%);
+}
+
+.table th,
+.table td {
+  border: 1px solid rgb(177 218 255 / 16%);
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.table th {
+  color: #e9f4ff;
+  font-weight: 700;
+}
+
+.table td {
+  color: #e3eeff;
+}
+
+.table tbody tr:hover {
+  background: rgb(63 93 132 / 25%);
+}
+
+.table td:first-child {
+  text-align: left;
+}
+
+.emptyState {
+  text-align: center !important;
+  padding: 20px !important;
+  color: #bdd0ea !important;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.statusConcluida {
+  color: #d8ffe5;
+  background: rgb(37 119 74 / 48%);
+  border-color: rgb(110 201 147 / 46%);
+}
+
+.statusPendente {
+  color: #fff3d2;
+  background: rgb(129 98 33 / 48%);
+  border-color: rgb(211 176 103 / 46%);
+}
+
+.statusCancelada {
+  color: #ffdfe0;
+  background: rgb(134 50 57 / 48%);
+  border-color: rgb(215 122 129 / 46%);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(7 10 14 / 62%);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  padding: 16px;
+  z-index: 20;
+}
+
+.modal {
+  width: min(700px, 100%);
+  background: rgb(20 32 54 / 60%);
+  border: 1px solid rgb(169 213 255 / 30%);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 24px 46px rgb(6 12 26 / 34%);
+  backdrop-filter: blur(18px) saturate(155%);
+  -webkit-backdrop-filter: blur(18px) saturate(155%);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.modalHeader h3 {
+  margin: 0;
+}
+
+.iconButton {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgb(170 213 255 / 22%);
+  border-radius: 8px;
+  background: rgb(12 20 37 / 45%);
+  color: #e8f2ff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #bdd0ea;
+}
+
+.formActions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.saveButton {
+  background: rgb(41 80 129 / 48%);
+  border-color: rgb(146 205 255 / 40%);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgb(169 213 255 / 26%);
+  background: rgb(21 32 54 / 42%);
+  box-shadow: 0 14px 28px rgb(6 12 26 / 24%);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+}
+
+.cardblue,
+.cardyellow,
+.cardgreen,
+.cardred {
+  background: rgb(21 32 54 / 42%);
+}
+
+.statIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgb(50 76 112 / 42%);
+  color: #cbe3ff;
+  border: 1px solid rgb(176 218 255 / 20%);
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #f5f9ff;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #c1d5ee;
+}
+
+.dashboardActions {
+  display: flex;
+}
+
+.actionCard {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgb(176 218 255 / 24%);
+  background: rgb(22 35 58 / 40%);
+  color: #e8f2ff;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: inset 0 1px 0 rgb(240 250 255 / 20%);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+}
+
+.paginationBar {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filtersBar {
+    grid-template-columns: 1fr;
+  }
+
+  .clearButton {
+    width: 100%;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .paginationBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

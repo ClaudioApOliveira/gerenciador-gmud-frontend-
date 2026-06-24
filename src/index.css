@@ -1,0 +1,29 @@
+:root {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color-scheme: dark;
+  --text-strong: #f5f9ff;
+  --text-base: #d9e7ff;
+  --text-muted: #b4c4dd;
+  --glass-bg: rgb(21 32 54 / 42%);
+  --glass-bg-strong: rgb(16 27 46 / 58%);
+  --glass-border: rgb(169 213 255 / 26%);
+  --glass-border-strong: rgb(184 228 255 / 40%);
+  --glass-shadow: 0 22px 44px rgb(6 12 26 / 34%);
+  --focus-ring: rgb(133 214 255 / 36%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-base);
+  background:
+    radial-gradient(circle at 10% 10%, rgb(136 213 255 / 35%), transparent 35%),
+    radial-gradient(circle at 84% 14%, rgb(188 154 255 / 27%), transparent 34%),
+    radial-gradient(circle at 76% 78%, rgb(99 227 219 / 20%), transparent 30%),
+    linear-gradient(155deg, #071125 0%, #09162d 52%, #081022 100%);
+  background-attachment: fixed;
+}
