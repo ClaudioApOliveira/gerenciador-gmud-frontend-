@@ -311,7 +311,7 @@ export default function Gmud() {
                             <th>Status Change</th>
                             <th>Tipo de Projeto</th>
                             <th>Desenvolvedor Nova</th>
-                            <th>Responsavel Brasilis</th>
+                            <th>Responsavel BrasilSeg</th>
                             <th>Acao</th>
                         </tr>
                     </thead>
@@ -477,7 +477,7 @@ export default function Gmud() {
                             </label>
 
                             <label>
-                                Responsavel Brasilis
+                                Responsavel BrasilSeg
                                 <input
                                     value={formData.responsavelBrasilis}
                                     onChange={(event) =>
