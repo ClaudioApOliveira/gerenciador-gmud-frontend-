@@ -179,12 +179,16 @@ async function requestWithAutoRefresh<T>(
     ...rest
   } = config;
 
+  const normalizedHeaders = new Headers(headers);
+  const hasBody = rest.body !== undefined && rest.body !== null;
+
+  if (hasBody && !normalizedHeaders.has("Content-Type")) {
+    normalizedHeaders.set("Content-Type", "application/json");
+  }
+
   const response = await fetch(`${API_BASE_URL}${path}`, {
     credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-      ...headers
-    },
+    headers: normalizedHeaders,
     ...rest
   });
 
