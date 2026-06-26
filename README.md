@@ -49,22 +49,16 @@ Use `VITE_API_BASE_URL` para definir o caminho base consumido pelo frontend.
 Exemplo:
 
 ```bash
-VITE_API_BASE_URL=/api/v1
+VITE_API_BASE_URL=https://api-vortexcodetech.com.br/api/v1
 ```
 
-Se a variável não existir, o app continua usando `/api/v1` como padrão.
+Se a variável não existir, o app continua usando `https://api-vortexcodetech.com.br/api/v1` como padrão.
 
-## Produção sem CORS
+## Produção
 
-Em produção, mantenha o frontend usando o caminho relativo `/api/v1` e deixe o Nginx do container fazer o proxy para o backend.
+Este frontend está configurado para usar o backend externo `https://api-vortexcodetech.com.br/api/v1`.
 
-Defina a variável de ambiente `API_UPSTREAM_URL` no container do frontend com a URL interna do backend, por exemplo:
-
-```bash
-API_UPSTREAM_URL=http://backend:8080
-```
-
-Assim o navegador fala apenas com o mesmo domínio do frontend, e o proxy encaminha `/api/...` para o backend sem depender de CORS no browser.
+O container de produção serve apenas os arquivos estáticos da pasta `dist` (sem proxy reverso).
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 

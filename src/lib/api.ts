@@ -1,6 +1,6 @@
 import { ENDPOINTS } from "./endpoints/index";
 
-const DEFAULT_API_BASE_URL = "/api/v1";
+const DEFAULT_API_BASE_URL = "https://api-vortexcodetech.com.br/api/v1";
 
 function normalizeApiBaseUrl(value?: string) {
   const trimmedValue = value?.trim();
